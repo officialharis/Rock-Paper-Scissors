@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Algorithm -
+ when we click a button:
+ 1. Computer randomly selects a move
+ 2. Compare the moves to get the result 
+ 3. Update a score 
+ 4. Display the result in a popup -->
+
+<body>
+  <div class="container">
+    <div class="buttons">
+      <p class="title">Rock Paper Scissor</p>
+    </div>
+      <div class="buttons">
+        <button onclick="
+            
+          playGame('rock');
+
+        " class="move-button"><img src="Images/rock-emoji.png" class="move-icon"></button>
+
+        <button onclick="
+          
+          playGame('paper');
+
+        " class="move-button"><img src="Images/paper-emoji.png" class="move-icon"></button>
+
+        <button onclick="
+
+          playGame('scissors');
+
+        " class="move-button">
+        <img src="Images/scissors-emoji.png" class="move-icon"></button>
+      </div>
+
+    <div class="buttons">
+      <p class="js-result result"></p>
+
+      <p class="js-moves moves"></p>
+
+      <p class="js-score"></p>
+    </div>
+
+    <div class="reset">
+      <button onclick="
+        score.Wins = 0;
+        score.Losses = 0;
+        score.Ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+      " class="score-button">Reset Score</button>
+    </div>
+
+  
+    <a href="https://www.linkedin.com/in/harish787/" id="tag">
+      <div class="built">
+        <span>Built by Harish</span>
+      </div>
+    </a>
+
+    
+
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
